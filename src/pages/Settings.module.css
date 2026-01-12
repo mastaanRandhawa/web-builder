@@ -1,0 +1,53 @@
+.settingsPage {
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+}
+
+.alert {
+  margin-bottom: 24px;
+  border-radius: 8px;
+}
+
+.formsContainer {
+  width: 100%;
+}
+
+.settingsCard {
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: none;
+}
+
+.sectionTitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+}
+
+.settingsCard :global(.ant-form-item-label > label) {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.settingsCard :global(.ant-input-affix-wrapper),
+.settingsCard :global(.ant-input-password) {
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+}
+

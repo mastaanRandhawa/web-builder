@@ -1,0 +1,132 @@
+.helpPage {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8f7ff 0%, #ffffff 100%);
+  padding: 80px 24px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+.faqCard,
+.contactCard {
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: none;
+  height: 100%;
+}
+
+.faqCard {
+  padding: 40px;
+}
+
+.contactCard {
+  padding: 32px;
+}
+
+.sectionTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+}
+
+.faqList {
+  width: 100%;
+}
+
+.faqItem {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.faqItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.faqQuestion {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.faqAnswer {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.contactTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+}
+
+.contactInfo {
+  width: 100%;
+}
+
+.contactItem {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.contactIcon {
+  font-size: 24px;
+  color: #ff2d55;
+  margin-top: 4px;
+}
+
+.contactLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.contactValue {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .helpPage {
+    padding: 40px 16px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .faqCard,
+  .contactCard {
+    padding: 24px;
+  }
+}
+

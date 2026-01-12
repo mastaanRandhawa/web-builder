@@ -1,0 +1,20 @@
+.notFoundPage {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8f7ff 0%, #ffffff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.notFoundPage :global(.ant-result-title) {
+  font-size: 72px;
+  font-weight: 800;
+  color: #ff2d55;
+}
+
+.notFoundPage :global(.ant-result-subtitle) {
+  font-size: 18px;
+  color: #666;
+}
+

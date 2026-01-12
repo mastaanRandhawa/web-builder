@@ -1,0 +1,90 @@
+.authPage {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8f7ff 0%, #ffffff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.authContainer {
+  width: 100%;
+  max-width: 440px;
+}
+
+.authCard {
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: none;
+  padding: 40px;
+}
+
+.authHeader {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.authTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.authSubtitle {
+  font-size: 15px;
+  color: #666;
+  margin: 0;
+}
+
+.authLink {
+  color: #ff2d55;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.authLink:hover {
+  text-decoration: underline;
+}
+
+.errorAlert {
+  margin-bottom: 24px;
+  border-radius: 8px;
+}
+
+.authForm {
+  margin-top: 8px;
+}
+
+.authForm :global(.ant-form-item-label > label) {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.authForm :global(.ant-input-affix-wrapper) {
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.authForm :global(.ant-input-password) {
+  border-radius: 8px;
+}
+
+.submitButton {
+  height: 48px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+@media (max-width: 480px) {
+  .authCard {
+    padding: 32px 24px;
+  }
+
+  .authTitle {
+    font-size: 28px;
+  }
+}
+

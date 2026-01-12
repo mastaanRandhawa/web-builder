@@ -1,0 +1,196 @@
+.pricingPage {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8f7ff 0%, #ffffff 100%);
+  padding: 80px 24px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+.setupCard {
+  background: linear-gradient(135deg, rgba(255, 45, 85, 0.1) 0%, rgba(255, 59, 92, 0.05) 100%);
+  border-radius: 16px;
+  text-align: center;
+  padding: 40px;
+  margin-bottom: 48px;
+  border: none;
+}
+
+.setupTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.setupPrice {
+  font-size: 48px;
+  font-weight: 800;
+  color: #ff2d55;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.setupDescription {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.plansRow {
+  margin-bottom: 64px;
+}
+
+.planCard {
+  height: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #f0f0f0;
+  overflow: hidden;
+}
+
+.planCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border-color: #ff2d55;
+}
+
+.planHeader {
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 24px;
+}
+
+.planName {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.planDescription {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.planPrice {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.priceAmount {
+  font-size: 40px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.pricePeriod {
+  font-size: 16px;
+  color: #666;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  min-height: 280px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  color: #333;
+}
+
+.checkIcon {
+  color: #52c41a;
+  font-size: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.planFooter {
+  padding-top: 24px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.addonsCard {
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 40px;
+  border: none;
+}
+
+.addonsTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.addonsDescription {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.addonsTable {
+  margin-top: 24px;
+}
+
+.addonsTable :global(.ant-table-thead > tr > th) {
+  background: #fafafa;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.addonsTable :global(.ant-table-tbody > tr > td) {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .pricingPage {
+    padding: 40px 16px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .setupCard {
+    padding: 32px 24px;
+  }
+
+  .addonsCard {
+    padding: 24px 16px;
+    overflow-x: auto;
+  }
+}
+
