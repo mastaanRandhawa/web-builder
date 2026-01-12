@@ -20,7 +20,7 @@ export function Button({
   
   const variantClasses = {
     primary: 'bg-primary-600 text-white hover:bg-primary-700 hover:shadow-lg hover:-translate-y-0.5 focus:ring-primary-500',
-    secondary: 'bg-zinc-100 text-zinc-900 hover:bg-zinc-200 hover:shadow-md focus:ring-zinc-500',
+    secondary: 'bg-white text-zinc-900 hover:bg-zinc-50 hover:shadow-md focus:ring-zinc-500',
     outline: 'border-2 border-zinc-300 text-zinc-700 hover:bg-zinc-50 hover:border-zinc-400 focus:ring-zinc-500',
     ghost: 'text-zinc-700 hover:bg-zinc-100 focus:ring-zinc-500',
   };

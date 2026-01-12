@@ -44,7 +44,7 @@ export function PublicLayout() {
               <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <span className="text-white font-bold text-sm">RT</span>
               </div>
-              <span className="text-xl font-bold text-zinc-900">Randhawa & Tomar Digital</span>
+              <span className="text-xl font-bold text-brand-dark">Randhawa & Tomar Digital</span>
             </Link>
             <nav className="hidden lg:flex items-center gap-1">
               {navItems.map((item) => (
@@ -72,7 +72,7 @@ export function PublicLayout() {
                     Login
                   </Link>
                   <Link to="/contact">
-                    <button className="px-4 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5">
+                    <button className="px-4 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
                       Get Started
                     </button>
                   </Link>
