@@ -1,28 +1,33 @@
-import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import { useAuthStore } from './store/authStore';
-import { ProtectedRoute } from './components/ProtectedRoute';
-import { PublicLayout } from './components/layouts/PublicLayout';
-import { AppLayout } from './components/layouts/AppLayout';
-import { UserRole } from './types';
+import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useAuthStore } from "./store/authStore";
+import { ProtectedRoute } from "./components/ProtectedRoute";
+import { PublicLayout } from "./components/layouts/PublicLayout";
+import { AppLayout } from "./components/layouts/AppLayout";
+import { UserRole } from "./types";
 
 // Public pages
-import { Landing } from './pages/Landing';
-import { Pricing } from './pages/Pricing';
-import { Login } from './pages/Login';
-import { Signup } from './pages/Signup';
-import { NotFound } from './pages/NotFound';
+import { Landing } from "./pages/Landing";
+import { Pricing } from "./pages/Pricing";
+import { Services } from "./pages/Services";
+import { HowItWorks } from "./pages/HowItWorks";
+import { CaseStudies } from "./pages/CaseStudies";
+import { About } from "./pages/About";
+import { Contact } from "./pages/Contact";
+import { Login } from "./pages/Login";
+import { Signup } from "./pages/Signup";
+import { NotFound } from "./pages/NotFound";
 
 // Client pages
-import { ClientDashboard } from './pages/client/Dashboard';
-import { WebsiteDetail } from './pages/client/WebsiteDetail';
+import { ClientDashboard } from "./pages/client/Dashboard";
+import { WebsiteDetail } from "./pages/client/WebsiteDetail";
 
 // Admin pages
-import { AdminDashboard } from './pages/admin/Dashboard';
-import { ClientsList } from './pages/admin/ClientsList';
-import { ClientDetail } from './pages/admin/ClientDetail';
-import { RequestsQueue } from './pages/admin/RequestsQueue';
-import { Invoices } from './pages/admin/Invoices';
+import { AdminDashboard } from "./pages/admin/Dashboard";
+import { ClientsList } from "./pages/admin/ClientsList";
+import { ClientDetail } from "./pages/admin/ClientDetail";
+import { RequestsQueue } from "./pages/admin/RequestsQueue";
+import { Invoices } from "./pages/admin/Invoices";
 
 function App() {
   const { checkAuth, isAuthenticated, user } = useAuthStore();
@@ -37,14 +42,23 @@ function App() {
         {/* Public routes */}
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Landing />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/about" element={<About />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/contact" element={<Contact />} />
           <Route
             path="/login"
-            element={isAuthenticated() ? <Navigate to="/app" replace /> : <Login />}
+            element={
+              isAuthenticated() ? <Navigate to="/app" replace /> : <Login />
+            }
           />
           <Route
             path="/signup"
-            element={isAuthenticated() ? <Navigate to="/app" replace /> : <Signup />}
+            element={
+              isAuthenticated() ? <Navigate to="/app" replace /> : <Signup />
+            }
           />
         </Route>
 

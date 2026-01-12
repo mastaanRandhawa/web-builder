@@ -7,3 +7,4 @@ export { Tabs } from './Tabs';
 export { Table, TableRow, TableCell } from './Table';
 export { EmptyState } from './EmptyState';
 export { Skeleton } from './Skeleton';
+export { AnimatedSection } from './AnimatedSection';
