@@ -7,38 +7,38 @@ import { ArrowRight, TrendingUp, Users, DollarSign } from 'lucide-react';
 
 const caseStudies = [
   {
-    client: 'Professional Services Firm',
+    client: 'Local Law Firm',
     industry: 'Legal Services',
-    challenge: 'Low online visibility and minimal lead generation from website',
-    solution: 'Complete digital infrastructure with SEO, conversion optimization, and lead capture systems',
+    challenge: 'Old website that wasn't bringing in new clients. They were spending too much time managing it themselves.',
+    solution: 'We built them a new website and manage it monthly. Added contact forms and helped them get found online.',
     results: [
-      { metric: '300%', label: 'Increase in organic traffic' },
-      { metric: '250%', label: 'More qualified leads' },
-      { metric: '180%', label: 'ROI improvement' },
+      { metric: 'More calls', label: 'From website visitors' },
+      { metric: 'Less time', label: 'Managing their website' },
+      { metric: 'Better results', label: 'From their online presence' },
     ],
     color: 'bg-blue-50',
   },
   {
-    client: 'Local Healthcare Practice',
+    client: 'Local Dental Practice',
     industry: 'Healthcare',
-    challenge: 'Outdated website with poor user experience and no booking system',
-    solution: 'Modern website with integrated booking calendar, patient forms, and automated follow-ups',
+    challenge: 'Website was outdated and hard to update. Patients couldn't book appointments online.',
+    solution: 'We built a new website and added online booking. Now we manage it monthly so they can focus on patients.',
     results: [
-      { metric: '400%', label: 'Online bookings' },
-      { metric: '60%', label: 'Reduction in phone calls' },
-      { metric: '220%', label: 'Patient inquiries' },
+      { metric: 'Online bookings', label: 'Patients can schedule anytime' },
+      { metric: 'Less phone calls', label: 'For simple appointments' },
+      { metric: 'More new patients', label: 'Finding them online' },
     ],
     color: 'bg-green-50',
   },
   {
-    client: 'E-commerce Business',
-    industry: 'Retail',
-    challenge: 'Low conversion rate and high cart abandonment',
-    solution: 'Conversion-focused redesign with A/B testing, email automation, and retargeting campaigns',
+    client: 'Local Gym',
+    industry: 'Fitness',
+    challenge: 'No website, or a basic one that didn't help them get new members.',
+    solution: 'We built a professional website with membership sign-up forms. We manage it monthly and help them grow.',
     results: [
-      { metric: '150%', label: 'Conversion rate increase' },
-      { metric: '45%', label: 'Reduction in cart abandonment' },
-      { metric: '200%', label: 'Revenue growth' },
+      { metric: 'More inquiries', label: 'About memberships' },
+      { metric: 'Online sign-ups', label: 'New members can join easily' },
+      { metric: 'Better presence', label: 'Professional website that works' },
     ],
     color: 'bg-purple-50',
   },
@@ -53,10 +53,10 @@ export function CaseStudies() {
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-display-2 mb-6 text-zinc-900 text-balance">
-                Proven Results for Serious Businesses
+                How We Help Local Businesses
               </h1>
               <p className="text-body-lg text-zinc-600 mb-8 max-w-2xl mx-auto">
-                We install digital infrastructure that delivers measurable results. Here's how we've transformed businesses across industries.
+                We help local businesses get professional websites that work. Here are a few examples of how we've helped.
               </p>
             </div>
           </AnimatedSection>
@@ -115,9 +115,9 @@ export function CaseStudies() {
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 {[
-                  { icon: TrendingUp, value: '250%', label: 'Average ROI increase' },
-                  { icon: Users, value: '500+', label: 'Clients served' },
-                  { icon: DollarSign, value: '$50M+', label: 'Revenue generated' },
+                  { icon: Users, value: '100+', label: 'Local businesses helped' },
+                  { icon: TrendingUp, value: 'Monthly', label: 'Website management' },
+                  { icon: DollarSign, value: 'Simple', label: 'Pricing, no surprises' },
                 ].map((stat) => {
                   const Icon = stat.icon;
                   return (
@@ -142,10 +142,10 @@ export function CaseStudies() {
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center bg-zinc-900 rounded-2xl p-12 lg:p-16">
               <h2 className="text-h1 text-white mb-6 text-balance">
-                Ready to See Similar Results?
+                Ready to Get Started?
               </h2>
               <p className="text-body-lg text-zinc-300 mb-8">
-                Let's discuss how we can install digital infrastructure for your business.
+                Let's talk about your business and how we can help you get a website that works.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">

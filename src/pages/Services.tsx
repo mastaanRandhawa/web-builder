@@ -8,30 +8,30 @@ import { ArrowRight, Globe, Zap, TrendingUp, BarChart3 } from 'lucide-react';
 const services = [
   {
     icon: Globe,
-    title: 'Website Core',
-    description: 'Professional WordPress websites that make your business exist online. Fast, secure, and optimized for conversions.',
-    features: ['Custom design', 'Mobile responsive', 'SEO optimized', 'Fast loading'],
+    title: 'Your Website',
+    description: 'Professional website that looks great and works on phones, tablets, and computers. We build it and keep it updated.',
+    features: ['Professional design', 'Mobile friendly', 'Easy to update', 'Fast loading'],
     color: 'bg-blue-50 text-blue-600',
   },
   {
     icon: Zap,
-    title: 'Conversion Systems',
-    description: 'Turn visitors into leads with strategic forms, landing pages, and conversion funnels designed to maximize results.',
-    features: ['Lead capture forms', 'Landing pages', 'A/B testing', 'Conversion tracking'],
+    title: 'Hosting & Security',
+    description: 'Your website is always online, secure, and backed up. We handle all the technical stuff so you don't have to.',
+    features: ['Fast hosting', 'SSL security', 'Regular backups', 'Always online'],
     color: 'bg-green-50 text-green-600',
   },
   {
     icon: TrendingUp,
-    title: 'Traffic Engines',
-    description: 'Drive qualified traffic to your site through SEO, content marketing, and paid advertising campaigns.',
-    features: ['SEO optimization', 'Content strategy', 'Google Ads', 'Social media ads'],
+    title: 'Contact Forms & Booking',
+    description: 'Simple tools that help customers reach you. Contact forms, booking calendars, and more—all set up and working.',
+    features: ['Contact forms', 'Booking calendar', 'Email notifications', 'Easy setup'],
     color: 'bg-purple-50 text-purple-600',
   },
   {
     icon: BarChart3,
-    title: 'Growth Intelligence',
-    description: 'Data-driven optimization and continuous improvement to scale your results over time.',
-    features: ['Analytics setup', 'Performance reports', 'Growth strategies', 'Ongoing optimization'],
+    title: 'Support & Updates',
+    description: 'We're here when you need us. Monthly updates, security patches, and help when something needs fixing.',
+    features: ['Monthly updates', 'Email support', 'Security updates', 'Quick fixes'],
     color: 'bg-orange-50 text-orange-600',
   },
 ];
@@ -45,10 +45,10 @@ export function Services() {
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-display-2 mb-6 text-zinc-900 text-balance">
-                Digital Infrastructure Services
+                What's Included in Your Monthly Website
               </h1>
               <p className="text-body-lg text-zinc-600 mb-8 max-w-2xl mx-auto">
-                We don't build websites. We install complete digital systems that turn visitors into customers and scale your business.
+                Your monthly plan includes everything you need to have a professional website that works. No extra fees. No surprises.
               </p>
             </div>
           </AnimatedSection>
@@ -60,9 +60,9 @@ export function Services() {
         <Container>
           <AnimatedSection>
             <div className="text-center mb-16">
-              <h2 className="text-h1 mb-4 text-zinc-900">Four Layers of Infrastructure</h2>
+              <h2 className="text-h1 mb-4 text-zinc-900">Everything You Need</h2>
               <p className="text-body-lg text-zinc-600 max-w-2xl mx-auto">
-                Each layer builds on the previous to create a complete conversion system
+                Your website, hosting, security, and support—all included in one simple monthly fee
               </p>
             </div>
           </AnimatedSection>
@@ -87,9 +87,9 @@ export function Services() {
                           </li>
                         ))}
                       </ul>
-                      <Link to="/contact">
+                      <Link to="/pricing">
                         <Button variant="outline" className="group-hover:border-primary-600 group-hover:text-primary-600 transition-colors">
-                          Learn More
+                          See Pricing
                           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                         </Button>
                       </Link>
@@ -108,10 +108,10 @@ export function Services() {
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center bg-zinc-900 rounded-2xl p-12 lg:p-16">
               <h2 className="text-h1 text-white mb-6 text-balance">
-                Ready to Install Your Digital Infrastructure?
+                Ready to Get Started?
               </h2>
               <p className="text-body-lg text-zinc-300 mb-8">
-                Let's discuss how we can transform your online presence into a conversion system.
+                Let's talk about your business and how we can help you get a website that works.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">

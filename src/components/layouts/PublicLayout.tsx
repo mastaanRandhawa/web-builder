@@ -131,7 +131,7 @@ export function PublicLayout() {
                   </span>
                 </div>
                 <p className="text-body-sm text-zinc-600">
-                  Websites. Systems. Growth.
+                  Monthly website management for local businesses.
                 </p>
               </div>
               <div>

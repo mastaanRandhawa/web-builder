@@ -15,13 +15,13 @@ export function Landing() {
             <AnimatedSection>
               <div>
                 <h1 className="text-display-1 mb-6 text-brand-dark text-balance leading-tight">
-                  Randhawa & Tomar Digital
+                  Your Website, Managed Monthly
                 </h1>
                 <p className="text-display-3 text-primary-600 mb-8 font-semibold">
-                  Websites. Systems. Growth.
+                  We handle your website so you can run your business.
                 </p>
                 <p className="text-body-lg text-zinc-700 mb-10 max-w-xl leading-relaxed">
-                  We don't sell websites. We install digital systems that turn visitors into customers.
+                  Professional website, hosting, updates, and support—all included in one monthly fee. No developers to hire. No tech headaches.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link to="/pricing">
@@ -45,7 +45,7 @@ export function Landing() {
                     <div className="w-24 h-24 bg-white/20 rounded-xl mx-auto mb-6 flex items-center justify-center backdrop-blur-sm">
                       <span className="text-4xl font-bold">RT</span>
                     </div>
-                    <p className="text-body text-white/80">SaaS Dashboard Preview</p>
+                    <p className="text-body text-white/80">Website Preview</p>
                   </div>
                 </div>
               </div>
@@ -60,23 +60,23 @@ export function Landing() {
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="text-display-3 mb-6 text-brand-dark">
-                Most websites don't generate business.
+                Managing a website shouldn't be your job.
               </h2>
             </div>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
             {[
               {
-                title: "Visitors come, but don't convert",
-                description: "Your site gets traffic, but visitors leave without taking action.",
+                title: "You're stuck managing your website",
+                description: "Updates, hosting, security—it's all on you, taking time away from your business.",
               },
               {
-                title: "No follow-ups, no tracking, no automation",
-                description: "You're missing leads and have no system to nurture them.",
+                title: "Hiring developers is expensive",
+                description: "Every change costs money. You need a simple monthly solution instead.",
               },
               {
-                title: "Owners don't know what's working",
-                description: "Without data, you're making decisions in the dark.",
+                title: "Your website isn't bringing in customers",
+                description: "It exists, but it's not helping you grow. You need someone to make it work.",
               },
             ].map((problem) => (
               <AnimatedSection key={problem.title}>
@@ -95,7 +95,7 @@ export function Landing() {
           <AnimatedSection>
             <div className="text-center">
               <p className="text-h2 text-zinc-700 font-medium">
-                A website without systems is just a digital business card.
+                You need a website partner, not another project to manage.
               </p>
             </div>
           </AnimatedSection>
@@ -108,7 +108,7 @@ export function Landing() {
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-display-3 mb-4 text-brand-dark">
-                We don't build pages. We deploy revenue infrastructure.
+                We manage your website every month. You focus on your business.
               </h2>
             </div>
           </AnimatedSection>
@@ -127,11 +127,11 @@ export function Landing() {
                     </thead>
                     <tbody className="divide-y divide-zinc-200">
                       {[
-                        { feature: "Delivery", typical: "One-time website", us: "Ongoing growth platform" },
-                        { feature: "Management", typical: "You manage hosting", us: "We manage everything" },
-                        { feature: "Tracking", typical: "No tracking", us: "Full conversion intelligence" },
-                        { feature: "Follow-up", typical: "No follow-up", us: "Automated systems" },
-                        { feature: "Decisions", typical: "Guessing", us: "Data-driven decisions" },
+                        { feature: "Website", typical: "One-time build", us: "Monthly managed service" },
+                        { feature: "Hosting & Updates", typical: "You handle it", us: "We handle everything" },
+                        { feature: "Support", typical: "Find your own help", us: "We're your team" },
+                        { feature: "Changes", typical: "Pay per change", us: "Included monthly" },
+                        { feature: "Growth", typical: "You figure it out", us: "We help you grow" },
                       ].map((row) => (
                         <tr key={row.feature} className="hover:bg-zinc-50 transition-colors">
                           <td className="py-4 px-6 text-body font-medium text-brand-dark">{row.feature}</td>
@@ -179,30 +179,30 @@ export function Landing() {
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-display-3 mb-4 text-brand-dark">
-                Your business grows in four layers.
+                Everything you need, included monthly.
               </h2>
             </div>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {[
               {
-                title: "Website Core",
-                description: "Makes your business exist online",
+                title: "Professional Website",
+                description: "Your business online, done right",
                 color: "bg-primary-600",
               },
               {
-                title: "Conversion Systems",
-                description: "Turns visitors into leads",
+                title: "Hosting & Security",
+                description: "Fast, secure, always online",
                 color: "bg-accent",
               },
               {
-                title: "Traffic Engines",
-                description: "Sends people to your site",
+                title: "Updates & Support",
+                description: "We keep it running smoothly",
                 color: "bg-primary-400",
               },
               {
-                title: "Growth Intelligence",
-                description: "Improves results over time",
+                title: "Growth Tools",
+                description: "Forms, booking, and more",
                 color: "bg-primary-700",
               },
             ].map((layer) => (
@@ -237,18 +237,18 @@ export function Landing() {
               {[
                 {
                   step: "1",
-                  title: "We deploy your website & systems",
-                  description: "Professional site, hosting, security, and conversion tools—all set up and ready.",
+                  title: "We set up your website",
+                  description: "Professional site, hosting, and security—all included. We handle the setup so you don't have to.",
                 },
                 {
                   step: "2",
-                  title: "We connect traffic, forms, tracking, and automation",
-                  description: "Everything works together. Visitors become leads, leads become customers.",
+                  title: "We manage it every month",
+                  description: "Updates, backups, security, and support. You focus on your business, we handle the website.",
                 },
                 {
                   step: "3",
-                  title: "We monitor, optimize, and grow your business",
-                  description: "Continuous improvement based on real data, not guesswork.",
+                  title: "We help you grow",
+                  description: "Simple tools like forms and booking calendars. We make it easy for customers to find and contact you.",
                 },
               ].map((step) => (
                 <AnimatedSection key={step.step}>
@@ -272,20 +272,20 @@ export function Landing() {
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-display-3 mb-4 text-brand-dark">
-                What You Get
+                What's Included
               </h2>
             </div>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
-              "Website",
-              "Hosting",
-              "Security",
-              "Lead capture",
-              "Booking",
-              "Analytics",
-              "SEO & ads",
-              "Support",
+              "Professional website",
+              "Hosting included",
+              "Security & backups",
+              "Contact forms",
+              "Booking calendar",
+              "Monthly updates",
+              "Email support",
+              "No long-term contracts",
             ].map((feature) => (
               <AnimatedSection key={feature}>
                 <Card className="hover:shadow-md hover:-translate-y-1 transition-all duration-300">
@@ -308,7 +308,7 @@ export function Landing() {
           <AnimatedSection>
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-display-3 mb-8 text-brand-dark">
-                Built for serious local businesses
+                Perfect for local businesses
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
                 {["Clinics", "Law firms", "Trades", "Gyms", "Restaurants", "Professional services"].map((business) => (
@@ -331,7 +331,7 @@ export function Landing() {
                 Plans start at $99/month
               </h2>
               <p className="text-body-lg text-zinc-600 mb-8">
-                All plans include hosting, security, and support.
+                All plans include your website, hosting, security, and monthly support. No surprises.
               </p>
               <Link to="/pricing">
                 <Button size="lg" className="w-full sm:w-auto">
@@ -350,9 +350,9 @@ export function Landing() {
           <AnimatedSection>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto text-center">
               {[
-                "Designed for high-trust industries",
-                "Built for conversion, not decoration",
-                "Systems-driven digital growth",
+                "Simple monthly pricing",
+                "No tech knowledge needed",
+                "We handle everything for you",
               ].map((statement) => (
                 <div key={statement} className="p-6">
                   <p className="text-h3 text-brand-dark font-medium">{statement}</p>
@@ -369,7 +369,7 @@ export function Landing() {
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-display-3 text-white mb-8 text-balance">
-                Ready to turn your website into a sales system?
+                Ready to get a website that works for you?
               </h2>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/pricing">

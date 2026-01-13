@@ -8,35 +8,35 @@ import { CheckCircle2, ArrowRight } from 'lucide-react';
 const steps = [
   {
     number: '01',
-    title: 'Discovery & Strategy',
-    description: 'We analyze your business, target audience, and goals to design a conversion system tailored to your needs.',
+    title: 'We Set Up Your Website',
+    description: 'We learn about your business and build your website. Professional design, hosting, and security—all included.',
     details: [
-      'Business model analysis',
-      'Target audience research',
-      'Competitive analysis',
-      'Conversion strategy design',
+      'We learn about your business',
+      'We build your website',
+      'We set up hosting and security',
+      'You review and approve',
     ],
   },
   {
     number: '02',
-    title: 'Deploy Infrastructure',
-    description: 'We build and deploy your website, conversion systems, and technical foundation with enterprise-grade quality.',
+    title: 'We Manage It Monthly',
+    description: 'Every month, we handle updates, backups, security, and support. You focus on your business, we handle the website.',
     details: [
-      'Website development',
-      'Conversion system setup',
-      'Analytics integration',
-      'Security & performance optimization',
+      'Monthly updates and backups',
+      'Security monitoring',
+      'Email support',
+      'Quick fixes when needed',
     ],
   },
   {
     number: '03',
-    title: 'Launch & Optimize',
-    description: 'We launch your system and continuously monitor, test, and optimize to maximize conversions and growth.',
+    title: 'We Help You Grow',
+    description: 'We add simple tools like contact forms and booking calendars. We help you get more customers through your website.',
     details: [
-      'Performance monitoring',
-      'A/B testing',
-      'Conversion optimization',
-      'Ongoing improvements',
+      'Contact forms and booking tools',
+      'Help with getting found online',
+      'Monthly check-ins',
+      'Simple growth suggestions',
     ],
   },
 ];
@@ -50,10 +50,10 @@ export function HowItWorks() {
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-display-2 mb-6 text-zinc-900 text-balance">
-                How We Install Digital Infrastructure
+                How It Works
               </h1>
               <p className="text-body-lg text-zinc-600 mb-8 max-w-2xl mx-auto">
-                A proven process that transforms your online presence into a conversion system that scales.
+                Simple process. We set up your website, manage it every month, and help you grow. No tech knowledge needed.
               </p>
             </div>
           </AnimatedSection>
@@ -105,14 +105,14 @@ export function HowItWorks() {
         <Container>
           <AnimatedSection>
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-h1 mb-12 text-center text-zinc-900">Typical Timeline</h2>
+              <h2 className="text-h1 mb-12 text-center text-zinc-900">What to Expect</h2>
               <div className="space-y-8">
                 {[
-                  { phase: 'Week 1-2', title: 'Discovery & Planning', description: 'Strategy session and system design' },
-                  { phase: 'Week 3-6', title: 'Development', description: 'Building your digital infrastructure' },
-                  { phase: 'Week 7', title: 'Testing & Refinement', description: 'Quality assurance and optimization' },
-                  { phase: 'Week 8', title: 'Launch', description: 'Go live and start converting' },
-                  { phase: 'Ongoing', title: 'Optimization', description: 'Continuous improvement and scaling' },
+                  { phase: 'Week 1-2', title: 'We Learn About Your Business', description: 'Quick call to understand what you need and how we can help' },
+                  { phase: 'Week 3-6', title: 'We Build Your Website', description: 'We create your site, set up hosting, and make sure everything works' },
+                  { phase: 'Week 7', title: 'You Review It', description: 'You check it out, tell us any changes, and we make them' },
+                  { phase: 'Week 8', title: 'We Launch It', description: 'Your website goes live and starts working for your business' },
+                  { phase: 'Every Month', title: 'We Manage It', description: 'Updates, backups, support, and help when you need it' },
                 ].map((item) => (
                   <div key={item.phase} className="flex items-start gap-6 pb-8 border-b border-zinc-200 last:border-0">
                     <div className="flex-shrink-0 w-24">
@@ -139,7 +139,7 @@ export function HowItWorks() {
                 Ready to Get Started?
               </h2>
               <p className="text-body-lg text-zinc-600 mb-8">
-                Let's discuss your project and how we can build your conversion system.
+                Let's talk about your business and how we can help you get a website that works.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">

@@ -48,10 +48,10 @@ export function Contact() {
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-display-2 mb-6 text-zinc-900 text-balance">
-                Let's Discuss Your Project
+                Let's Talk About Your Business
               </h1>
               <p className="text-body-lg text-zinc-600 mb-8 max-w-2xl mx-auto">
-                Ready to install digital infrastructure for your business? Get in touch and we'll discuss how we can help.
+                Ready to get a website that works? Get in touch and we'll discuss how we can help your business.
               </p>
             </div>
           </AnimatedSection>
@@ -174,7 +174,7 @@ export function Contact() {
                           value={formData.message}
                           onChange={handleChange}
                           className="block w-full px-4 py-2.5 border border-zinc-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 sm:text-sm resize-none"
-                          placeholder="Tell us about your project..."
+                          placeholder="Tell us about your business..."
                         />
                       </div>
                       <Button

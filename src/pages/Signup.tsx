@@ -43,11 +43,11 @@ export function Signup() {
       <div className="max-w-md w-full">
         <Card>
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-zinc-900 mb-2">Create your account</h2>
+            <h2 className="text-3xl font-bold text-zinc-900 mb-2">Start Your Website Plan</h2>
             <p className="text-zinc-600">
               Or{' '}
               <Link to="/login" className="text-primary-600 hover:text-primary-700 font-medium">
-                sign in to your existing account
+                sign in to your website
               </Link>
             </p>
           </div>
@@ -88,7 +88,7 @@ export function Signup() {
             />
 
             <Button type="submit" className="w-full" isLoading={isLoading}>
-              Create account
+              Get Started
             </Button>
           </form>
         </Card>

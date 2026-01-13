@@ -38,7 +38,7 @@ export function Login() {
         <Card>
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-zinc-900 mb-2">
-              Sign in to your account
+              Sign in to your website
             </h2>
             <p className="text-zinc-600">
               Or{" "}
@@ -46,7 +46,7 @@ export function Login() {
                 to="/signup"
                 className="text-primary-600 hover:text-primary-700 font-medium"
               >
-                create a new account
+                start a new plan
               </Link>
             </p>
           </div>

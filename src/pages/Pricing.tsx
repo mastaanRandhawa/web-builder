@@ -9,7 +9,7 @@ const plans = [
   {
     name: Plan.FOUNDATION,
     price: 99,
-    salesStory: 'You exist online.',
+    salesStory: 'Get your business online.',
     features: {
       website: '5 pages',
       hosting: true,
@@ -31,7 +31,7 @@ const plans = [
   {
     name: Plan.GROWTH,
     price: 179,
-    salesStory: 'You collect leads.',
+    salesStory: 'Get more customers.',
     features: {
       website: '10 pages',
       hosting: true,
@@ -53,7 +53,7 @@ const plans = [
   {
     name: Plan.SCALE,
     price: 299,
-    salesStory: 'You convert leads.',
+    salesStory: 'Grow your business.',
     features: {
       website: 'Unlimited',
       hosting: true,
@@ -75,7 +75,7 @@ const plans = [
   {
     name: Plan.DOMINANCE,
     price: 599,
-    salesStory: 'We actively grow your business.',
+    salesStory: 'Full service growth.',
     features: {
       website: 'Unlimited',
       hosting: true,
@@ -135,10 +135,10 @@ export function Pricing() {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-display-2 mb-4 text-zinc-900 font-heading text-balance">
-              Pricing Plans
+              Simple Monthly Pricing
             </h1>
             <p className="text-body-lg text-zinc-600 max-w-2xl mx-auto">
-              Choose the plan that fits your needs. All plans include setup and hosting.
+              Choose the plan that fits your business. All plans include your website, hosting, security, and monthly support.
             </p>
           </div>
 
@@ -146,9 +146,9 @@ export function Pricing() {
         <div className="max-w-2xl mx-auto mb-16">
           <Card className="bg-primary-50 border-primary-200">
             <div className="text-center py-8">
-              <h2 className="text-2xl font-bold text-zinc-900 mb-2">One-Time Setup Fee</h2>
+              <h2 className="text-2xl font-bold text-zinc-900 mb-2">One-Time Setup</h2>
               <p className="text-5xl font-bold text-primary-600 mb-2">$299</p>
-              <p className="text-zinc-600">One-time setup fee applies to all plans</p>
+              <p className="text-zinc-600">One-time setup fee to build your website. Then just your monthly fee.</p>
             </div>
           </Card>
         </div>
@@ -268,10 +268,10 @@ export function Pricing() {
         <Container>
           {/* Add-ons Section */}
           <div className="mb-8">
-            <h2 className="text-h1 mb-4 text-center text-zinc-900 font-heading">Add-On Services</h2>
+            <h2 className="text-h1 mb-4 text-center text-zinc-900 font-heading">Optional Add-Ons</h2>
             <p className="text-center text-zinc-600 mb-8 max-w-3xl mx-auto">
-              Add-ons are more expensive on lower tiers but included on higher tiers. For example, 
-              SEO Optimization costs $249/mo as an add-on, but is included in Scale and Dominance plans.
+              Need something extra? These add-ons are available. Some are included in higher plans. 
+              For example, SEO is included in Scale and Dominance plans, or $249/month as an add-on.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

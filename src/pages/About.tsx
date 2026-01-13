@@ -8,27 +8,27 @@ import { Target, Users, Award, Zap } from "lucide-react";
 const values = [
   {
     icon: Target,
-    title: "Results-Driven",
+    title: "Simple & Clear",
     description:
-      "We measure success by the outcomes we deliver, not the hours we bill.",
+      "No confusing tech talk. We explain things in plain English and keep it simple.",
   },
   {
     icon: Users,
-    title: "Client-Focused",
+    title: "We're Here for You",
     description:
-      "Your success is our success. We're invested in your long-term growth.",
+      "Your success matters to us. We're your website partner, not just a vendor.",
   },
   {
     icon: Award,
-    title: "Enterprise-Grade",
+    title: "Reliable Service",
     description:
-      "We build systems that scale, using proven methodologies and best practices.",
+      "Your website stays online, stays secure, and stays updated. We make sure it works.",
   },
   {
     icon: Zap,
-    title: "Continuous Improvement",
+    title: "Always Improving",
     description:
-      "We never stop optimizing. Your system gets better over time, not worse.",
+      "We keep your website updated and help you grow. It gets better over time.",
   },
 ];
 
@@ -41,11 +41,10 @@ export function About() {
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-display-2 mb-6 text-zinc-900 text-balance">
-                We Install Digital Infrastructure
+                We Manage Websites for Local Businesses
               </h1>
               <p className="text-body-lg text-zinc-600 mb-8 max-w-2xl mx-auto">
-                We're not a web design agency. We're infrastructure engineers
-                who build conversion systems for serious businesses.
+                We help local businesses get professional websites without the hassle. You focus on your business, we handle your website.
               </p>
             </div>
           </AnimatedSection>
@@ -61,17 +60,13 @@ export function About() {
                 <div>
                   <h2 className="text-h1 mb-6 text-zinc-900">Our Mission</h2>
                   <p className="text-body-lg text-zinc-600 mb-6">
-                    We exist to install digital infrastructure that transforms
-                    how businesses acquire and serve customers online.
+                    We help local businesses get professional websites that work. Simple monthly service, no tech headaches.
                   </p>
                   <p className="text-body-lg text-zinc-600 mb-6">
-                    Most agencies sell websites. We sell systems. Systems that
-                    convert visitors into customers, scale with your business,
-                    and improve over time.
+                    Most website companies build you a site and leave. We build it and manage it every month. Updates, security, support—we handle it all.
                   </p>
                   <p className="text-body-lg text-zinc-600">
-                    We work with businesses that are serious about growth, not
-                    just looking for a pretty website.
+                    We work with local businesses that want a website partner, not another project to manage.
                   </p>
                 </div>
                 <div>
@@ -142,24 +137,24 @@ export function About() {
               <div className="space-y-8">
                 {[
                   {
-                    title: "We Think in Systems, Not Pages",
+                    title: "We Handle Everything",
                     description:
-                      "Every element we build connects to a larger conversion system. Nothing exists in isolation.",
+                      "Website, hosting, security, updates—we manage it all so you don't have to think about it.",
                   },
                   {
-                    title: "We Measure Everything",
+                    title: "Simple Monthly Service",
                     description:
-                      "If we can't measure it, we don't build it. Data drives every decision we make.",
+                      "One monthly fee covers everything. No surprise charges. No complicated contracts.",
                   },
                   {
-                    title: "We Optimize Continuously",
+                    title: "We Help You Grow",
                     description:
-                      "Your system gets better over time through testing, analysis, and iteration.",
+                      "We add tools like contact forms and booking calendars. We help you get more customers.",
                   },
                   {
-                    title: "We Scale With You",
+                    title: "We're Your Partner",
                     description:
-                      "We build infrastructure that grows with your business, not something you outgrow.",
+                      "We're here when you need us. Email support, quick fixes, and help when something comes up.",
                   },
                 ].map((item) => (
                   <div
@@ -189,11 +184,10 @@ export function About() {
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-h1 mb-6 text-zinc-900 text-balance">
-                Ready to Work Together?
+                Ready to Get Started?
               </h2>
               <p className="text-body-lg text-zinc-600 mb-8">
-                Let's discuss how we can install digital infrastructure for your
-                business.
+                Let's talk about your business and how we can help you get a website that works.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
