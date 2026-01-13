@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
+import { Container } from '../components/ui/Container';
+import { Section } from '../components/ui/Section';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 
 const steps = [
@@ -41,10 +43,10 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       {/* Hero */}
-      <section className="section-padding">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section>
+        <Container>
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-display-2 mb-6 text-zinc-900 text-balance">
@@ -55,12 +57,12 @@ export function HowItWorks() {
               </p>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Steps */}
-      <section className="section-padding bg-zinc-50">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="light">
+        <Container>
           <div className="space-y-24">
             {steps.map((step, index) => (
               <AnimatedSection key={step.number}>
@@ -95,12 +97,12 @@ export function HowItWorks() {
               </AnimatedSection>
             ))}
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Timeline */}
-      <section className="section-padding">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section>
+        <Container>
           <AnimatedSection>
             <div className="max-w-4xl mx-auto">
               <h2 className="text-h1 mb-12 text-center text-zinc-900">Typical Timeline</h2>
@@ -125,12 +127,12 @@ export function HowItWorks() {
               </div>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* CTA */}
-      <section className="section-padding bg-zinc-50">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="light">
+        <Container>
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-h1 mb-6 text-zinc-900 text-balance">
@@ -154,8 +156,8 @@ export function HowItWorks() {
               </div>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
     </div>
   );
 }

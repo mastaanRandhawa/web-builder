@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Button, Card } from '../components/ui';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
+import { Container } from '../components/ui/Container';
+import { Section } from '../components/ui/Section';
 import { ArrowRight, TrendingUp, Users, DollarSign } from 'lucide-react';
 
 const caseStudies = [
@@ -44,10 +46,10 @@ const caseStudies = [
 
 export function CaseStudies() {
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       {/* Hero */}
-      <section className="section-padding">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section>
+        <Container>
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-display-2 mb-6 text-zinc-900 text-balance">
@@ -58,12 +60,12 @@ export function CaseStudies() {
               </p>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Case Studies */}
-      <section className="section-padding bg-zinc-50">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="light">
+        <Container>
           <div className="space-y-16">
             {caseStudies.map((study) => (
               <AnimatedSection key={study.client}>
@@ -103,12 +105,12 @@ export function CaseStudies() {
               </AnimatedSection>
             ))}
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Social Proof */}
-      <section className="section-padding">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section>
+        <Container>
           <AnimatedSection>
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -131,12 +133,12 @@ export function CaseStudies() {
               </div>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* CTA */}
-      <section className="section-padding bg-zinc-50">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="light">
+        <Container>
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center bg-zinc-900 rounded-2xl p-12 lg:p-16">
               <h2 className="text-h1 text-white mb-6 text-balance">
@@ -160,8 +162,8 @@ export function CaseStudies() {
               </div>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
     </div>
   );
 }

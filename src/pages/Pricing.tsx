@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Button, Card } from '../components/ui';
+import { Container } from '../components/ui/Container';
+import { Section } from '../components/ui/Section';
 import { Plan } from '../types';
 import { Check, X } from 'lucide-react';
 
@@ -127,17 +129,18 @@ const featureLabels: Record<string, string> = {
 
 export function Pricing() {
   return (
-    <div className="bg-white py-24">
-      <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-zinc-900 mb-4">
-            Pricing Plans
-          </h1>
-          <p className="text-xl text-zinc-600 max-w-2xl mx-auto">
-            Choose the plan that fits your needs. All plans include setup and hosting.
-          </p>
-        </div>
+    <div className="bg-white overflow-x-hidden">
+      <Section>
+        <Container>
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-display-2 mb-4 text-zinc-900 font-heading text-balance">
+              Pricing Plans
+            </h1>
+            <p className="text-body-lg text-zinc-600 max-w-2xl mx-auto">
+              Choose the plan that fits your needs. All plans include setup and hosting.
+            </p>
+          </div>
 
         {/* Setup Cost */}
         <div className="max-w-2xl mx-auto mb-16">
@@ -185,53 +188,92 @@ export function Pricing() {
 
         {/* Feature Comparison Table */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-zinc-900 mb-8 text-center">Feature Comparison</h2>
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-zinc-200 border border-zinc-200 rounded-lg">
-              <thead className="bg-zinc-50">
-                <tr>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-zinc-900">Feature</th>
-                  {plans.map((plan) => (
-                    <th key={plan.name} className="px-6 py-4 text-center text-sm font-semibold text-zinc-900">
-                      {plan.name}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-zinc-200">
-                {Object.entries(featureLabels).map(([key, label]) => (
-                  <tr key={key}>
-                    <td className="px-6 py-4 text-sm font-medium text-zinc-900">{label}</td>
-                    {plans.map((plan) => {
-                      const value = plan.features[key as keyof typeof plan.features];
-                      return (
-                        <td key={plan.name} className="px-6 py-4 text-center text-sm">
-                          {value === true ? (
-                            <Check className="w-5 h-5 text-green-600 mx-auto" />
-                          ) : value === false ? (
-                            <X className="w-5 h-5 text-zinc-300 mx-auto" />
-                          ) : value === 'add-on' ? (
-                            <span className="text-zinc-500">Add-on</span>
-                          ) : (
-                            <span className="text-zinc-700">{value}</span>
-                          )}
-                        </td>
-                      );
-                    })}
+          <h2 className="text-h1 mb-8 text-center text-zinc-900 font-heading">Feature Comparison</h2>
+          
+          {/* Desktop Table */}
+          <div className="hidden lg:block">
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-zinc-200 border border-zinc-200 rounded-lg">
+                <thead className="bg-zinc-50">
+                  <tr>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-zinc-900">Feature</th>
+                    {plans.map((plan) => (
+                      <th key={plan.name} className="px-6 py-4 text-center text-sm font-semibold text-zinc-900">
+                        {plan.name}
+                      </th>
+                    ))}
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="bg-white divide-y divide-zinc-200">
+                  {Object.entries(featureLabels).map(([key, label]) => (
+                    <tr key={key}>
+                      <td className="px-6 py-4 text-sm font-medium text-zinc-900">{label}</td>
+                      {plans.map((plan) => {
+                        const value = plan.features[key as keyof typeof plan.features];
+                        return (
+                          <td key={plan.name} className="px-6 py-4 text-center text-sm">
+                            {value === true ? (
+                              <Check className="w-5 h-5 text-green-600 mx-auto" />
+                            ) : value === false ? (
+                              <X className="w-5 h-5 text-zinc-300 mx-auto" />
+                            ) : value === 'add-on' ? (
+                              <span className="text-zinc-500">Add-on</span>
+                            ) : (
+                              <span className="text-zinc-700">{value}</span>
+                            )}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Mobile Cards - Group by Feature */}
+          <div className="lg:hidden space-y-6">
+            {Object.entries(featureLabels).map(([key, label]) => (
+              <Card key={key} className="p-6">
+                <h3 className="text-h4 mb-4 text-zinc-900 font-heading">{label}</h3>
+                <div className="space-y-4">
+                  {plans.map((plan) => {
+                    const value = plan.features[key as keyof typeof plan.features];
+                    return (
+                      <div key={plan.name} className="flex items-center justify-between pb-3 border-b border-zinc-100 last:border-0 last:pb-0">
+                        <span className="text-body-sm font-medium text-zinc-700">{plan.name}</span>
+                        <div className="flex-shrink-0">
+                          {value === true ? (
+                            <Check className="w-5 h-5 text-green-600" />
+                          ) : value === false ? (
+                            <X className="w-5 h-5 text-zinc-300" />
+                          ) : value === 'add-on' ? (
+                            <span className="text-body-sm text-zinc-500">Add-on</span>
+                          ) : (
+                            <span className="text-body-sm text-zinc-700">{value}</span>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
+        </Container>
+      </Section>
 
-        {/* Add-ons Section */}
-        <div className="mb-8">
-          <h2 className="text-3xl font-bold text-zinc-900 mb-4 text-center">Add-On Services</h2>
-          <p className="text-center text-zinc-600 mb-8 max-w-3xl mx-auto">
-            Add-ons are more expensive on lower tiers but included on higher tiers. For example, 
-            SEO Optimization costs $249/mo as an add-on, but is included in Scale and Dominance plans.
-          </p>
+      <Section variant="light">
+        <Container>
+          {/* Add-ons Section */}
+          <div className="mb-8">
+            <h2 className="text-h1 mb-4 text-center text-zinc-900 font-heading">Add-On Services</h2>
+            <p className="text-center text-zinc-600 mb-8 max-w-3xl mx-auto">
+              Add-ons are more expensive on lower tiers but included on higher tiers. For example, 
+              SEO Optimization costs $249/mo as an add-on, but is included in Scale and Dominance plans.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {addons.map((addon) => (
               <Card key={addon.name}>
@@ -248,8 +290,8 @@ export function Pricing() {
               </Card>
             ))}
           </div>
-        </div>
-      </div>
+        </Container>
+      </Section>
     </div>
   );
 }

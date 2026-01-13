@@ -19,10 +19,10 @@ export function Button({
   const baseClasses = 'font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center justify-center';
   
   const variantClasses = {
-    primary: 'bg-primary-600 text-white hover:bg-primary-700 hover:shadow-lg hover:-translate-y-0.5 focus:ring-primary-500',
-    secondary: 'bg-white text-zinc-900 hover:bg-zinc-50 hover:shadow-md focus:ring-zinc-500',
-    outline: 'border-2 border-zinc-300 text-zinc-700 hover:bg-zinc-50 hover:border-zinc-400 focus:ring-zinc-500',
-    ghost: 'text-zinc-700 hover:bg-zinc-100 focus:ring-zinc-500',
+    primary: 'bg-primary-600 text-white hover:bg-primary-700 hover:shadow-lg hover:-translate-y-0.5 focus:ring-primary-500 active:bg-primary-800',
+    secondary: 'bg-white text-zinc-900 hover:bg-zinc-50 hover:shadow-md focus:ring-zinc-500 border border-zinc-200',
+    outline: 'border-2 border-zinc-300 text-zinc-700 hover:bg-zinc-50 hover:border-zinc-400 focus:ring-zinc-500 bg-transparent',
+    ghost: 'text-zinc-700 hover:bg-zinc-100 focus:ring-zinc-500 bg-transparent',
   };
 
   const sizeClasses = {

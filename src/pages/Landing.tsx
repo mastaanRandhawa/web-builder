@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
 import { Button, Card } from "../components/ui";
 import { AnimatedSection } from "../components/ui/AnimatedSection";
+import { Container } from "../components/ui/Container";
+import { Section } from "../components/ui/Section";
 import { ArrowRight, Check, X } from "lucide-react";
 
 export function Landing() {
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       {/* HERO SECTION */}
-      <section className="min-h-screen flex items-center section-padding">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <Section className="min-h-screen flex items-center">
+        <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
               <div>
@@ -49,12 +51,12 @@ export function Landing() {
               </div>
             </AnimatedSection>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* PROBLEM SECTION */}
-      <section className="section-padding bg-brand-light">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="light">
+        <Container>
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="text-display-3 mb-6 text-brand-dark">
@@ -73,12 +75,12 @@ export function Landing() {
                 description: "You're missing leads and have no system to nurture them.",
               },
               {
-                title: "Business owners don't know what's working",
+                title: "Owners don't know what's working",
                 description: "Without data, you're making decisions in the dark.",
               },
             ].map((problem) => (
               <AnimatedSection key={problem.title}>
-                <Card className="h-full text-center">
+                <Card className="h-full text-center hover:shadow-lg transition-all duration-300">
                   <div className="p-8">
                     <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <X className="w-6 h-6 text-red-600" />
@@ -97,12 +99,12 @@ export function Landing() {
               </p>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* DIFFERENCE SECTION */}
-      <section className="section-padding">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section>
+        <Container>
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-display-3 mb-4 text-brand-dark">
@@ -112,8 +114,9 @@ export function Landing() {
           </AnimatedSection>
           <AnimatedSection>
             <div className="max-w-4xl mx-auto">
-              <Card className="overflow-hidden">
-                <div className="overflow-x-auto">
+              {/* Desktop Table */}
+              <div className="hidden md:block">
+                <Card className="overflow-hidden">
                   <table className="w-full">
                     <thead>
                       <tr className="border-b border-zinc-200">
@@ -138,16 +141,41 @@ export function Landing() {
                       ))}
                     </tbody>
                   </table>
-                </div>
-              </Card>
+                </Card>
+              </div>
+
+              {/* Mobile Cards */}
+              <div className="md:hidden space-y-4">
+                {[
+                  { feature: "Delivery", typical: "One-time website", us: "Ongoing growth platform" },
+                  { feature: "Management", typical: "You manage hosting", us: "We manage everything" },
+                  { feature: "Tracking", typical: "No tracking", us: "Full conversion intelligence" },
+                  { feature: "Follow-up", typical: "No follow-up", us: "Automated systems" },
+                  { feature: "Decisions", typical: "Guessing", us: "Data-driven decisions" },
+                ].map((row) => (
+                  <Card key={row.feature} className="p-6">
+                    <h3 className="text-h4 mb-4 text-brand-dark font-heading">{row.feature}</h3>
+                    <div className="space-y-3">
+                      <div className="pb-3 border-b border-zinc-200">
+                        <p className="text-body-sm text-zinc-500 mb-1">Typical Agency</p>
+                        <p className="text-body text-zinc-700">{row.typical}</p>
+                      </div>
+                      <div>
+                        <p className="text-body-sm text-primary-600 font-medium mb-1">Randhawa & Tomar Digital</p>
+                        <p className="text-body font-medium text-primary-600">{row.us}</p>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* FOUR LAYERS SECTION */}
-      <section className="section-padding bg-brand-light">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="light">
+        <Container>
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-display-3 mb-4 text-brand-dark">
@@ -179,7 +207,7 @@ export function Landing() {
               },
             ].map((layer) => (
               <AnimatedSection key={layer.title}>
-                <Card className="text-center hover:shadow-lg transition-all duration-300">
+                <Card className="text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                   <div className="p-8">
                     <div className={`w-20 h-20 ${layer.color} rounded-2xl mx-auto mb-6 flex items-center justify-center text-white text-3xl font-bold`}>
                       {layer.title.charAt(0)}
@@ -191,12 +219,12 @@ export function Landing() {
               </AnimatedSection>
             ))}
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* HOW IT WORKS SECTION */}
-      <section className="section-padding">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section>
+        <Container>
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-display-3 mb-4 text-brand-dark">
@@ -224,28 +252,23 @@ export function Landing() {
                 },
               ].map((step) => (
                 <AnimatedSection key={step.step}>
-                  <div className="relative">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-primary-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">
-                        {step.step}
-                      </div>
-                      <h3 className="text-h2 mb-4 text-brand-dark">{step.title}</h3>
-                      <p className="text-body text-zinc-600 leading-relaxed">{step.description}</p>
+                  <div className="relative text-center">
+                    <div className="w-16 h-16 bg-primary-600 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">
+                      {step.step}
                     </div>
-                    {step.step !== "3" && (
-                      <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-zinc-200 -translate-x-1/2" style={{ width: 'calc(100% - 4rem)' }} />
-                    )}
+                    <h3 className="text-h2 mb-4 text-brand-dark">{step.title}</h3>
+                    <p className="text-body text-zinc-600 leading-relaxed">{step.description}</p>
                   </div>
                 </AnimatedSection>
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* WHAT YOU GET SECTION */}
-      <section className="section-padding bg-brand-light">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="light">
+        <Container>
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-display-3 mb-4 text-brand-dark">
@@ -253,18 +276,19 @@ export function Landing() {
               </h2>
             </div>
           </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
-              "Professional website",
-              "Hosting & security",
+              "Website",
+              "Hosting",
+              "Security",
               "Lead capture",
-              "Booking systems",
-              "Analytics & tracking",
-              "SEO & ads (higher tiers)",
-              "Ongoing support",
+              "Booking",
+              "Analytics",
+              "SEO & ads",
+              "Support",
             ].map((feature) => (
               <AnimatedSection key={feature}>
-                <Card className="hover:shadow-md transition-all duration-300">
+                <Card className="hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                   <div className="flex items-center gap-3 p-6">
                     <div className="w-6 h-6 bg-primary-600 rounded flex items-center justify-center flex-shrink-0">
                       <Check className="w-4 h-4 text-white" />
@@ -275,12 +299,12 @@ export function Landing() {
               </AnimatedSection>
             ))}
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* WHO IT'S FOR SECTION */}
-      <section className="section-padding">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section>
+        <Container>
           <AnimatedSection>
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-display-3 mb-8 text-brand-dark">
@@ -295,12 +319,12 @@ export function Landing() {
               </div>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* PRICING TEASER SECTION */}
-      <section className="section-padding bg-brand-light">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="light">
+        <Container>
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center bg-white rounded-2xl p-12 shadow-lg">
               <h2 className="text-h1 mb-4 text-brand-dark">
@@ -317,12 +341,12 @@ export function Landing() {
               </Link>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* TRUST SECTION */}
-      <section className="section-padding">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section>
+        <Container>
           <AnimatedSection>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto text-center">
               {[
@@ -336,12 +360,12 @@ export function Landing() {
               ))}
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* FINAL CTA SECTION */}
-      <section className="section-padding bg-gradient-to-br from-primary-600 to-primary-800">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section className="bg-gradient-to-br from-primary-600 to-primary-800">
+        <Container>
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-display-3 text-white mb-8 text-balance">
@@ -362,8 +386,8 @@ export function Landing() {
               </div>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
     </div>
   );
 }

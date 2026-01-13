@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button, Card } from "../components/ui";
 import { AnimatedSection } from "../components/ui/AnimatedSection";
+import { Container } from "../components/ui/Container";
+import { Section } from "../components/ui/Section";
 import { Target, Users, Award, Zap } from "lucide-react";
 
 const values = [
@@ -32,10 +34,10 @@ const values = [
 
 export function About() {
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       {/* Hero */}
-      <section className="section-padding">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section>
+        <Container>
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-display-2 mb-6 text-zinc-900 text-balance">
@@ -47,12 +49,12 @@ export function About() {
               </p>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Mission */}
-      <section className="section-padding bg-zinc-50">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="light">
+        <Container>
           <AnimatedSection>
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -89,12 +91,12 @@ export function About() {
               </div>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Values */}
-      <section className="section-padding">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section>
+        <Container>
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-h1 mb-4 text-zinc-900">Our Values</h2>
@@ -126,12 +128,12 @@ export function About() {
               );
             })}
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Approach */}
-      <section className="section-padding bg-zinc-50">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="light">
+        <Container>
           <AnimatedSection>
             <div className="max-w-4xl mx-auto">
               <h2 className="text-h1 mb-12 text-center text-zinc-900">
@@ -178,12 +180,12 @@ export function About() {
               </div>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* CTA */}
-      <section className="section-padding">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section>
+        <Container>
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-h1 mb-6 text-zinc-900 text-balance">
@@ -211,8 +213,8 @@ export function About() {
               </div>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
     </div>
   );
 }

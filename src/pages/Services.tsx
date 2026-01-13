@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Button, Card } from '../components/ui';
 import { AnimatedSection } from '../components/ui/AnimatedSection';
+import { Container } from '../components/ui/Container';
+import { Section } from '../components/ui/Section';
 import { ArrowRight, Globe, Zap, TrendingUp, BarChart3 } from 'lucide-react';
 
 const services = [
@@ -36,10 +38,10 @@ const services = [
 
 export function Services() {
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       {/* Hero */}
-      <section className="section-padding">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section>
+        <Container>
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-display-2 mb-6 text-zinc-900 text-balance">
@@ -50,12 +52,12 @@ export function Services() {
               </p>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Services Grid */}
-      <section className="section-padding bg-zinc-50">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="light">
+        <Container>
           <AnimatedSection>
             <div className="text-center mb-16">
               <h2 className="text-h1 mb-4 text-zinc-900">Four Layers of Infrastructure</h2>
@@ -97,12 +99,12 @@ export function Services() {
               );
             })}
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* CTA */}
-      <section className="section-padding">
-        <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8">
+      <Section>
+        <Container>
           <AnimatedSection>
             <div className="max-w-3xl mx-auto text-center bg-zinc-900 rounded-2xl p-12 lg:p-16">
               <h2 className="text-h1 text-white mb-6 text-balance">
@@ -125,8 +127,8 @@ export function Services() {
               </div>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
+        </Container>
+      </Section>
     </div>
   );
 }

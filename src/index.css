@@ -1,27 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --brand-primary: #1f3cff;
+  --brand-dark: #0b1020;
+  --brand-light: #f6f7fb;
+  --brand-accent: #6ea8ff;
+}
+
 @layer base {
   * {
     @apply border-zinc-200;
+    box-sizing: border-box;
   }
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
   }
 
   body {
-    @apply font-sans text-body text-zinc-900 antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    @apply text-body text-zinc-900 antialiased;
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 }
 

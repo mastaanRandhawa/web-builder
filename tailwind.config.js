@@ -14,18 +14,18 @@ export default {
           300: '#a5b4fc',
           400: '#818cf8',
           500: '#6366f1',
-          600: '#1f3cff', // Royal blue - main brand
+          600: 'var(--brand-primary)', // #1f3cff - Royal blue
           700: '#1e3a8a',
           800: '#1e40af',
           900: '#1e3a8a',
         },
         brand: {
-          dark: '#0b1020', // Near-black navy
+          dark: 'var(--brand-dark)', // #0b1020
           neutral: '#18181b',
-          light: '#f6f7fb', // Off-white
+          light: 'var(--brand-light)', // #f6f7fb
         },
         accent: {
-          DEFAULT: '#6ea8ff', // Soft blue highlight
+          DEFAULT: 'var(--brand-accent)', // #6ea8ff
         },
       },
       maxWidth: {
@@ -33,7 +33,9 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-        display: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        body: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        heading: ['Poppins', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        display: ['Poppins', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
       fontSize: {
         'display-1': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
