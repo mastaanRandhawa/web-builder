@@ -16,7 +16,7 @@ const services = [
   {
     icon: Zap,
     title: 'Hosting & Security',
-    description: 'Your website is always online, secure, and backed up. We handle all the technical stuff so you don't have to.',
+    description: "Your website is always online, secure, and backed up. We handle all the technical stuff so you don't have to.",
     features: ['Fast hosting', 'SSL security', 'Regular backups', 'Always online'],
     color: 'bg-green-50 text-green-600',
   },
@@ -30,7 +30,7 @@ const services = [
   {
     icon: BarChart3,
     title: 'Support & Updates',
-    description: 'We're here when you need us. Monthly updates, security patches, and help when something needs fixing.',
+    description: "We're here when you need us. Monthly updates, security patches, and help when something needs fixing.",
     features: ['Monthly updates', 'Email support', 'Security updates', 'Quick fixes'],
     color: 'bg-orange-50 text-orange-600',
   },

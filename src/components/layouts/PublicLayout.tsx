@@ -11,23 +11,43 @@ export function PublicLayout() {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+
+      // Update scrolled state for styling
+      setScrolled(currentScrollY > 20);
+
+      // Show/hide navbar based on scroll direction
+      if (currentScrollY < 10) {
+        // Always show at the top
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolling down - hide navbar
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up - show navbar
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
     };
-    window.addEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/services", label: "Services" },
-    { path: "/how-it-works", label: "How It Works" },
-    { path: "/case-studies", label: "Case Studies" },
-    { path: "/about", label: "About" },
-    { path: "/pricing", label: "Pricing" },
-    { path: "/contact", label: "Contact" },
+    { path: "/", label: "HOME" },
+    { path: "/services", label: "SERVICES" },
+    { path: "/how-it-works", label: "HOW IT WORKS" },
+    { path: "/case-studies", label: "TESTIMONIALS" },
+    { path: "/about", label: "ABOUT" },
+    { path: "/pricing", label: "PRICING" },
+    { path: "/contact", label: "CONTACT" },
   ];
 
   const isActive = (path: string) => {
@@ -41,15 +61,18 @@ export function PublicLayout() {
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Sticky Header */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
             ? "bg-white/95 backdrop-blur-md border-b border-zinc-200 shadow-sm"
             : "bg-white/80 backdrop-blur-sm border-b border-zinc-200/50"
-        }`}
+        } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
       >
         <Container>
           <div className="flex justify-between items-center h-16 md:h-20">
-            <Link to="/" className="flex items-center gap-2 group flex-shrink-0">
+            <Link
+              to="/"
+              className="flex items-center gap-2 group flex-shrink-0"
+            >
               <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <span className="text-white font-bold text-sm">RT</span>
               </div>
@@ -79,12 +102,16 @@ export function PublicLayout() {
             <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
               {isAuthenticated() ? (
                 <Link to="/app">
-                  <Button variant="outline" size="sm">Dashboard</Button>
+                  <Button variant="outline" size="sm">
+                    Dashboard
+                  </Button>
                 </Link>
               ) : (
                 <>
                   <Link to="/login">
-                    <Button variant="ghost" size="sm">Sign In</Button>
+                    <Button variant="ghost" size="sm">
+                      Sign In
+                    </Button>
                   </Link>
                   <Link to="/pricing">
                     <Button size="sm">View Pricing</Button>
@@ -112,7 +139,7 @@ export function PublicLayout() {
         navItems={navItems}
       />
 
-      <main className="overflow-x-hidden">
+      <main className="overflow-x-hidden pt-16 md:pt-20">
         <Outlet />
       </main>
 
@@ -203,9 +230,7 @@ export function PublicLayout() {
                 <p className="text-body-sm text-zinc-600 mb-2">
                   support@rt.digital
                 </p>
-                <p className="text-body-sm text-zinc-600">
-                  +1 (234) 567-8900
-                </p>
+                <p className="text-body-sm text-zinc-600">+1 (234) 567-8900</p>
               </div>
             </div>
             <div className="mt-12 pt-8 border-t border-zinc-200 text-center text-body-sm text-zinc-600">

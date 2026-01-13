@@ -9,7 +9,7 @@ const caseStudies = [
   {
     client: 'Local Law Firm',
     industry: 'Legal Services',
-    challenge: 'Old website that wasn't bringing in new clients. They were spending too much time managing it themselves.',
+    challenge: "Old website that wasn't bringing in new clients. They were spending too much time managing it themselves.",
     solution: 'We built them a new website and manage it monthly. Added contact forms and helped them get found online.',
     results: [
       { metric: 'More calls', label: 'From website visitors' },
@@ -21,7 +21,7 @@ const caseStudies = [
   {
     client: 'Local Dental Practice',
     industry: 'Healthcare',
-    challenge: 'Website was outdated and hard to update. Patients couldn't book appointments online.',
+    challenge: "Website was outdated and hard to update. Patients couldn't book appointments online.",
     solution: 'We built a new website and added online booking. Now we manage it monthly so they can focus on patients.',
     results: [
       { metric: 'Online bookings', label: 'Patients can schedule anytime' },
@@ -33,7 +33,7 @@ const caseStudies = [
   {
     client: 'Local Gym',
     industry: 'Fitness',
-    challenge: 'No website, or a basic one that didn't help them get new members.',
+    challenge: "No website, or a basic one that didn't help them get new members.",
     solution: 'We built a professional website with membership sign-up forms. We manage it monthly and help them grow.',
     results: [
       { metric: 'More inquiries', label: 'About memberships' },
